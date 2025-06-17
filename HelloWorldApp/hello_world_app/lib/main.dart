@@ -10,10 +10,14 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    //Al Devolver un Widget Constante , Flutter no tiene que rearmarlo todo de nuevo, Mejora el Performance
-    return const MaterialApp(
+    //Al Devolver un Widget Constante , Flutter no tiene  que rearmarlo todo de nuevo, Mejora el Performance
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterScreen()
+      theme: ThemeData(
+        useMaterial3: true ,//Por Defecto desde las Version 3.16, se usa Material3
+        colorSchemeSeed: Colors.greenAccent,
+      ),
+      home:  const CounterScreen()
     );
   }
 
