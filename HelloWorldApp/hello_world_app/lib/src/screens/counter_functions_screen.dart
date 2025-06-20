@@ -21,7 +21,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
     return Scaffold(
         appBar: AppBar( //AppBar no es Constante debido a que sus dimensiones son dinamicas en dependencia de la pantalla
           backgroundColor: Colors.greenAccent,
-          title: Center(child: Text('Counter Functions', style: GoogleFonts.rajdhani(fontWeight: FontWeight.bold, color: Colors.black,))),
+          title: Center(child: Text('COUNTER FUNCTIONS', style: GoogleFonts.rajdhani(fontWeight: FontWeight.bold, color: Colors.black,))),
           actions: [
             IconButton(
             icon: Icon(Icons.refresh_rounded),
@@ -37,7 +37,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
             //Para tomar en Centro de la Columna, usamos el mainAxisAligment
             mainAxisAlignment: MainAxisAlignment.center,
              children:  [
-              Text(clickCounter == 1 ?'Click' : 'Clicks', style: GoogleFonts.rajdhani(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black,)),
+              Text(clickCounter == 1 ?'CLICK' : 'CLICKS', style: GoogleFonts.rajdhani(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black,)),
               Text('$clickCounter', style: GoogleFonts.rajdhani(fontSize: 100, fontWeight: FontWeight.bold, color: Colors.black,)),
             ],
           ),

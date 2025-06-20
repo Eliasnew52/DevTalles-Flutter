@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib/src/screens/counter_screen.dart)",
+            "type": "dart",
+            "request": "launch",
+            "cwd": "HelloWorldApp/hello_world_app",
+            "program": "lib/src/screens/counter_screen.dart"
+        }
+    ]
+}
