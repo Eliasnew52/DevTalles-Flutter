@@ -19,7 +19,7 @@ class YourMessage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: Text(
-              'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'lorem ipsum dolor sit amet,.',
               style: GoogleFonts.rajdhani(
                 color: Colors.amber,
                 fontWeight: FontWeight.bold,
@@ -28,9 +28,39 @@ class YourMessage extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 10), // Spacing between messages
+        const SizedBox(height: 10),
+
+        _ImageMessage(), // Spacing between messages
         //Todo: Images
+        const SizedBox(height: 10),
       ],
+    );
+  }
+}
+
+class _ImageMessage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    return ClipRRect(
+      borderRadius: BorderRadiusGeometry.circular(20),
+      child: Image.network(
+        'https://yesno.wtf/assets/yes/7-653c8ee5d3a6bbafd759142c9c18d76c.gif',
+        width: size.width * 0.7,
+        height: 150,
+        fit: BoxFit.cover, // Adjust the width as needed
+        loadingBuilder: (context, child, loadingProgress) {
+          if (loadingProgress == null) return child;
+          return Container(
+            width: size.width * 0.7,
+            height: 150,
+            alignment: Alignment.center,
+            child: Text('Loading...',style: GoogleFonts.rajdhani(color: Colors.amber, fontWeight: FontWeight.bold),),
+          );
+        },
+      ),
+      
     );
   }
 }

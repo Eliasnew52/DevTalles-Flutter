@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yesnoapp/presentation/widgets/chat/my_message.dart';
 import 'package:yesnoapp/presentation/widgets/chat/your_message.dart';
+import 'package:yesnoapp/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -87,7 +88,7 @@ class _ChatView extends StatelessWidget {
                 ),
               ),
             ),
-            Text('Mundo'),
+            MessageFieldBox(),
           ],
         ),
       ),
